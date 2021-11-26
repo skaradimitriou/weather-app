@@ -1,11 +1,12 @@
 package com.stathis.weatherapp.ui.dashboard
 
 import android.os.Bundle
+import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.stathis.weatherapp.R
 import com.stathis.weatherapp.abstraction.AbstractActivity
-import com.stathis.weatherapp.models.WeatherResponse
+import com.stathis.weatherapp.models.Data
 
 class MainActivity : AbstractActivity() {
 
@@ -21,16 +22,18 @@ class MainActivity : AbstractActivity() {
     }
 
     override fun startOps() {
-        val city = "London"
+        val city = resources.getString(R.string.dummy_city)
         viewModel.getWeatherForCity(city)
+        //viewModel.getWeek(city,"6")
 
         viewModel.data.observe(this, Observer {
             it?.let { bindDataToScreen(it) }
         })
     }
 
-    private fun bindDataToScreen(it: WeatherResponse) {
+    private fun bindDataToScreen(it: Data) {
         //bind data to ui
+        Log.d("",it.toString())
     }
 
     override fun stopOps() {
