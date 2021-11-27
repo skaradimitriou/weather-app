@@ -1,4 +1,4 @@
-package com.stathis.weatherapp.ui.dashboard
+package com.stathis.weatherapp.ui.dashboard.main
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
