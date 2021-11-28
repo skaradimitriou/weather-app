@@ -1,4 +1,4 @@
-package com.stathis.weatherapp.models
+package com.stathis.weatherapp.models.response
 
 data class CurrentCondition(
     val FeelsLikeC: String,

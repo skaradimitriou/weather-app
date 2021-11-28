@@ -5,10 +5,9 @@
     tools:context=".ui.dashboard.main.MainFragment">
 
     <data>
-
         <variable
             name="city"
-            type="com.stathis.weatherapp.models.Request" />
+            type="com.stathis.weatherapp.models.response.Request" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

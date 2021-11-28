@@ -1,4 +1,7 @@
-package com.stathis.weatherapp.models
+package com.stathis.weatherapp.models.response
+
+import com.stathis.weatherapp.models.response.Astronomy
+import com.stathis.weatherapp.models.response.Hourly
 
 data class Weather(
     val astronomy: List<Astronomy>,

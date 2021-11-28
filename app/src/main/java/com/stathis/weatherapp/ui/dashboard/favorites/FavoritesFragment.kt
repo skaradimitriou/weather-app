@@ -14,7 +14,13 @@ class FavoritesFragment : AbstractFragment<FragmentFavoritesBinding>(R.layout.fr
     }
 
     override fun startOps() {
-        //
+        binding.title.text = "Favorites Fragment"
+
+        binding.addBtn.setOnClickListener {  openDialogue() }
+    }
+
+    private fun openDialogue() {
+        //FIXME: open a dialogue that you can add a location to your favorite list.
     }
 
     override fun stopOps() {

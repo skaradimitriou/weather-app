@@ -1,8 +1,8 @@
 package com.stathis.weatherapp.network
 
 import androidx.lifecycle.MutableLiveData
-import com.stathis.weatherapp.models.Data
-import com.stathis.weatherapp.models.ResponseModel
+import com.stathis.weatherapp.models.response.Data
+import com.stathis.weatherapp.models.response.ResponseModel
 import com.stathis.weatherapp.util.API_KEY
 import com.stathis.weatherapp.util.BASE_URL
 import com.stathis.weatherapp.util.RESPONSE_FORMAT

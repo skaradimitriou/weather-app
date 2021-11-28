@@ -1,6 +1,6 @@
 package com.stathis.weatherapp.network
 
-import com.stathis.weatherapp.models.ResponseModel
+import com.stathis.weatherapp.models.response.ResponseModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

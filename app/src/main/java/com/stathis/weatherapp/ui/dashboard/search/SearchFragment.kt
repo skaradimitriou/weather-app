@@ -15,7 +15,7 @@ class SearchFragment : AbstractFragment<FragmentSearchBinding>(R.layout.fragment
     }
 
     override fun startOps() {
-        //
+        binding.title.text = "Search Fragment"
     }
 
     override fun stopOps() {

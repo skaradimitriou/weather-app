@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.stathis.weatherapp.R
 import com.stathis.weatherapp.abstraction.AbstractFragment
 import com.stathis.weatherapp.databinding.FragmentMainBinding
-import com.stathis.weatherapp.models.Data
+import com.stathis.weatherapp.models.response.Data
 
 
 class MainFragment : AbstractFragment<FragmentMainBinding>(R.layout.fragment_main) {
