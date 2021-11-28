@@ -5,23 +5,87 @@
     tools:context=".ui.dashboard.main.MainFragment">
 
     <data>
+
         <variable
             name="city"
             type="com.stathis.weatherapp.models.response.Request" />
+
+        <variable
+            name="location"
+            type="com.stathis.weatherapp.models.response.CurrentCondition" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/location_icon"
+            android:layout_width="@dimen/dimen_30"
+            android:layout_height="@dimen/dimen_30"
+            android:layout_margin="@dimen/dimen_16"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/location_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{city.query}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:paddingStart="@dimen/dimen_10"
+            android:text="@string/dummy_location"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18"
+            app:layout_constraintBottom_toBottomOf="@id/location_icon"
+            app:layout_constraintStart_toEndOf="@id/location_icon"
+            app:layout_constraintTop_toTopOf="@id/location_icon" />
+
+        <ImageView
+            android:id="@+id/location_weather_img"
+            android:layout_width="@dimen/img_150"
+            android:layout_height="@dimen/img_150"
+            android:layout_marginTop="@dimen/dimen_30"
+            loadImage="@{location.weatherIconUrl.get(0).value}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:src="@mipmap/ic_launcher"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintTop_toBottomOf="@id/location_name"/>
+
+        <TextView
+            android:id="@+id/location_weather_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimen_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_18"
+            android:paddingTop="@dimen/dimen_16"
+            tools:text="@string/weather_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_weather_img"
+            android:text="@{location.weatherDesc.get(0).value}" />
+
+        <TextView
+            android:id="@+id/location_weather_celcius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dimen_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_50"
+            android:textStyle="bold"
+            setCelcius="@{location.feelsLikeC}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/location_weather_desc"
+            tools:text="@string/dummy_temperature" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

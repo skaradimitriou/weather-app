@@ -7,5 +7,8 @@
     <string name="nav_home">Home</string>
     <string name="nav_search">Search</string>
     <string name="nav_locations">Locations</string>
+    <string name="dummy_location">Athens, Greece</string>
+    <string name="dummy_temperature">32℃</string>
+    <string name="weather_desc">It\'s Hot!</string>
 
 </resources>

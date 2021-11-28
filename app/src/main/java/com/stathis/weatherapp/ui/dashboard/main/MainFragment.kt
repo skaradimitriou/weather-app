@@ -35,5 +35,6 @@ class MainFragment : AbstractFragment<FragmentMainBinding>(R.layout.fragment_mai
         //bind data to ui
         Log.d("",it.toString())
         it.request.firstOrNull()?.let { binding.city = it }
+        it.current_condition.firstOrNull()?.let { binding.location = it }
     }
 }

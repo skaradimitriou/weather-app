@@ -11,6 +11,7 @@ class MainActivity : AbstractActivity<ActivityMainBinding>(R.layout.activity_mai
     override fun init() {
         val navController = findNavController(R.id.nav_host_fragment)
         binding.bottomNavigationMenu.setupWithNavController(navController)
+        supportActionBar?.hide()
     }
 
     override fun startOps() {}

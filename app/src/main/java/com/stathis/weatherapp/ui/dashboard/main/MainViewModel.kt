@@ -10,7 +10,7 @@ class MainViewModel : ViewModel() {
     val data = MutableLiveData<Data>()
 
     fun getWeatherForCity(city : String){
-        //ApiClient.getWeatherForCity(city,data)
+        ApiClient.getWeatherForCity(city,data)
     }
 
     fun getWeek(city : String,noOfDays : String){
